@@ -4,7 +4,6 @@ import sys
 import shutil
 import ctypes
 from subprocess import call
-
 cwd = os.getcwd()
 pthf1 = 'setx /m PATH "', cwd, '\\ffmpeg\\bin;%PATH%"'
 pthf2 = str(pthf1)
@@ -31,7 +30,7 @@ if is_admin():
 else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
 
-path = cwd, "\\tmp"
+path = cwd, "\\instant-ngp\\tmp"
 path1 = str(path)
 path2 = path1.removeprefix("('")
 path3 = path2.removesuffix("')")

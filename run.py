@@ -4,9 +4,12 @@ import tkinter
 from tkinter import *
 from os import listdir
 from os.path import isfile, join
-os.system("pip3 install numpy")
+
+print("Start the process...")
+os.system('pause')
+
 cwd = os.getcwd()
-path = cwd, "\\tmp"
+path = cwd, "\\instant-ngp\\tmp"
 path1 = str(path)
 path2 = path1.removeprefix("('")
 path3 = path2.removesuffix("')")
@@ -22,13 +25,28 @@ chpath = str(peth)
 chpath1 = chpath.removeprefix("('")
 chpath2 = chpath1.removesuffix("')")
 chpath3 = chpath2.replace("', '", "")
-command = "python3 ", chpath3, '\\scripts\\colmap2nerf.py --video_in ', vidio2, " --video_fps 2 --run_colmap --aabb_scale 16"
+command = "python ", chpath3, '\\scripts\\colmap2nerf.py --video_in ', vidio2, " --video_fps 2 --run_colmap --aabb_scale 16"
 command1 = str(command)
 command2= command1.removesuffix("')")
 command3 = command2.removeprefix("('")
 command4 = command3.replace("', '", "")
-os.system(command4)
-x = input("Do you want to delete all files in tmp folder(to replace with tkinter gui) [Y]es/[N]o: ")
+#os.system(command4)
+
+
+fina = cwd, "\\instant-ngp\\build\\testbed.exe --scene tmp\\images"
+final = str(fina)
+final1 = final.removeprefix("('")
+final2 = final1.removesuffix("')")
+final3 = final2.replace("', '", "")
+print(final3)
+
+
+
+
+
+
+
+x = input("Do you want to delete all files in tmp folder [Y]es/[N]o: ")
 xu = x.upper()
 if xu == str('Y'):
   
@@ -42,5 +60,3 @@ if xu == str('Y'):
                 shutil.rmtree(file_path)
         except Exception as e:
             print('failed to delete files')
-else:
-    print("ok bruv")
