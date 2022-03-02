@@ -30,7 +30,7 @@ command1 = str(command)
 command2= command1.removesuffix("')")
 command3 = command2.removeprefix("('")
 command4 = command3.replace("', '", "")
-#os.system(command4)
+os.system(command4)
 
 
 fina = cwd, "\\instant-ngp\\build\\testbed.exe --scene tmp\\images"
@@ -38,7 +38,7 @@ final = str(fina)
 final1 = final.removeprefix("('")
 final2 = final1.removesuffix("')")
 final3 = final2.replace("', '", "")
-print(final3)
+os.system(final3)
 
 
 
