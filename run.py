@@ -2,8 +2,10 @@ import os
 import shutil
 from os import listdir
 from os.path import isfile, join
-print("Start the process...")
+print("Start the extracting frames from the video and run instant-ngp...")
 os.system('pause')
+os.system("pip install numpy")
+os.system("pip install opencv-python")
 cwd = os.getcwd()
 path = cwd, "\\instant-ngp\\tmp"
 path1 = str(path)
