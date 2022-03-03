@@ -1,6 +1,6 @@
-## Instant-ngp helper
+# Instant-ngp helper
 This is a helper for using [instant-ngp](https://github.com/NVlabs/instant-ngp).
-# How to use
+## How to use
 First install:
 -Visual Studio 2019 (Desktop development with C++)
 -Cuda 11.6
