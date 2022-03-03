@@ -26,7 +26,6 @@ if is_admin():
     os.system(pthc5)
 else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
-
 path = cwd, "\\instant-ngp\\tmp"
 path1 = str(path)
 path2 = path1.removeprefix("('")

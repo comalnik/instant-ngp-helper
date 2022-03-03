@@ -44,7 +44,6 @@ os.system(final3)
 x = input("Do you want to delete all files in instant-ngp\tmp folder [Y]es/[N]o: ")
 xu = x.upper()
 if xu == str('Y'):
-  
     folder = path4
     for filename in os.listdir(folder):
         file_path = os.path.join(folder, filename)

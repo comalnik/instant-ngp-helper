@@ -17,6 +17,5 @@ if is_admin():
         full_file_name = os.path.join(folder1, file_name)
         if os.path.isfile(full_file_name):
             shutil.copy(full_file_name, folder2)
-    
 else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
