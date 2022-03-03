@@ -3,10 +3,10 @@ This is a helper for using [instant-ngp](https://github.com/NVlabs/instant-ngp).
 ## How to use
 First install:
 
--Visual Studio 2019 (Desktop development with C++)
--Cuda 11.6
--Python 3.9 or 3.10
--git
+- Visual Studio 2019 (Desktop development with C++)
+- Cuda 11.6
+- Python 3.9 or 3.10
+- git
 
 Then clone this repository and run install.py in windows terminal.The installation might take 10 minutes or more.(Only run install.py for the first time. After installing always use run.py)
 ```
