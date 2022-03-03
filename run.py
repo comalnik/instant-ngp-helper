@@ -1,7 +1,5 @@
 import os
 import shutil
-import tkinter
-from tkinter import *
 from os import listdir
 from os.path import isfile, join
 print("Start the process...")
