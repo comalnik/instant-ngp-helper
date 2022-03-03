@@ -4,10 +4,8 @@ import tkinter
 from tkinter import *
 from os import listdir
 from os.path import isfile, join
-
 print("Start the process...")
 os.system('pause')
-
 cwd = os.getcwd()
 path = cwd, "\\instant-ngp\\tmp"
 path1 = str(path)
@@ -31,22 +29,19 @@ command2= command1.removesuffix("')")
 command3 = command2.removeprefix("('")
 command4 = command3.replace("', '", "")
 os.system(command4)
-
-
-fina = cwd, "\\instant-ngp\\build\\testbed.exe --scene tmp\\images"
+chang = cwd, "\\instant-ngp"
+change = str(chang)
+change1 = change.removeprefix("('")
+change2 = change1.removesuffix("')")
+change3 = change2.replace("', '", "")
+os.chdir(change3)
+fina = cwd, "\\instant-ngp\\build\\testbed --scene tmp"
 final = str(fina)
 final1 = final.removeprefix("('")
 final2 = final1.removesuffix("')")
 final3 = final2.replace("', '", "")
 os.system(final3)
-
-
-
-
-
-
-
-x = input("Do you want to delete all files in tmp folder [Y]es/[N]o: ")
+x = input("Do you want to delete all files in instant-ngp\tmp folder [Y]es/[N]o: ")
 xu = x.upper()
 if xu == str('Y'):
   

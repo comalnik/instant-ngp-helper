@@ -15,9 +15,6 @@ pthc2 = str(pthc1)
 pthc3 = pthc2.removeprefix("('")
 pthc4 = pthc3.removesuffix("')")
 pthc5 = pthc4.replace("', '", "")
-
-
-
 def is_admin():
     try:
         return ctypes.windll.shell32.IsUserAnAdmin()
