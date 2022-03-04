@@ -12,7 +12,7 @@ Then clone this repository and run install.py in command prompt. Then close the 
 ```
 python install.py
 ```
-Put your video file in the instant-ngp-helper\instant-ngp\tmp directory. Then start a new cmd instance, and run run.py. Whem finished the program will ask you to delete everything from the instant-ngp-helper\instant-ngp\tmp directory, so make sure to heve a copy of the video file saved elsewhere. 
+Put your video file in the instant-ngp-helper\instant-ngp\tmp directory. Then start a new cmd instance, and run run.py. When finished the program will ask you to delete everything from the instant-ngp-helper\instant-ngp\tmp directory, so make sure to heve a copy of the video file saved elsewhere. 
 ```
 python run.py
 ```
