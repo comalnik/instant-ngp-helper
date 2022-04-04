@@ -10,7 +10,7 @@ os.system("pip install opencv-python")
 cwd = str(os.getcwd())
 path1 = cwd+'\\instant-ngp\\tmp'
 path0 = cwd+'\\instant-ngp'
-videopath = cwd+'\\instant-ngp\\tmp\\*.mp4'
+videopath = cwd+'\\instant-ngp\\tmp'
 videos = [f for f in listdir(videopath) if isfile(join(videopath, f))]
 videostr = ''.join(videos)
 os.chdir(path1)
