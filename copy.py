@@ -1,5 +1,4 @@
 import os
-import subprocess
 import shutil
 import ctypes
 import sys
