@@ -1,33 +1,19 @@
-import subprocess
 import os
 import sys
-import shutil
 import ctypes
 from subprocess import call
-cwd = os.getcwd()
-pthf1 = 'setx PATH "', cwd, '\\ffmpeg\\bin;%PATH%"'
-pthf2 = str(pthf1)
-pthf3 = pthf2.removeprefix("('")
-pthf4 = pthf3.removesuffix("')")
-pthf5 = pthf4.replace("', '", "")
-pthc1 = 'setx /m PATH "', cwd, '\\COLMAP;%PATH%"'
-pthc2 = str(pthc1)
-pthc3 = pthc2.removeprefix("('")
-pthc4 = pthc3.removesuffix("')")
-pthc5 = pthc4.replace("', '", "")
-os.system(pthf5)
+cwd = str(os.getcwd())
+ffmpeg = 'setx PATH "'+cwd+'\\ffmpeg\\bin;%PATH%"'
+colmap = 'setx /m PATH "'+cwd+'\\COLMAP;%PATH%"'
+tmp = cwd+'\\instant-ngp\\tmp'
+os.system(ffmpeg)
 def is_admin():
     try:
         return ctypes.windll.shell32.IsUserAnAdmin()
     except:
         return False
 if is_admin():
-    os.system(pthc5)
+    os.system(colmap)
 else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
-path = cwd, "\\instant-ngp\\tmp"
-path1 = str(path)
-path2 = path1.removeprefix("('")
-path3 = path2.removesuffix("')")
-path4 = path3.replace("', '", "")
-os.mkdir(path4)
+os.mkdir(tmp)
