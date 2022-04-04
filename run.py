@@ -1,46 +1,25 @@
 import os
 import shutil
+import glob
 from os import listdir
 from os.path import isfile, join
 print("Start the frame extraction process and run instant-ngp...")
 os.system('pause')
 os.system("pip install numpy")
 os.system("pip install opencv-python")
-cwd = os.getcwd()
-path = cwd, "\\instant-ngp\\tmp"
-path1 = str(path)
-path2 = path1.removeprefix("('")
-path3 = path2.removesuffix("')")
-path4 = path3.replace("', '", "")
-mypath = path4
-onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-vidio = str(onlyfiles)
-vidio1 = vidio.removesuffix("']")
-vidio2 = vidio1.removeprefix("['")
-os.chdir(path4)
-peth = cwd, "\\instant-ngp" 
-chpath = str(peth)
-chpath1 = chpath.removeprefix("('")
-chpath2 = chpath1.removesuffix("')")
-chpath3 = chpath2.replace("', '", "")
-command = "python ", chpath3, '\\scripts\\colmap2nerf.py --video_in ', vidio2, " --video_fps 2 --run_colmap --aabb_scale 16"
-command1 = str(command)
-command2= command1.removesuffix("')")
-command3 = command2.removeprefix("('")
-command4 = command3.replace("', '", "")
-os.system(command4)
-chang = cwd, "\\instant-ngp"
-change = str(chang)
-change1 = change.removeprefix("('")
-change2 = change1.removesuffix("')")
-change3 = change2.replace("', '", "")
-os.chdir(change3)
-fina = cwd, "\\instant-ngp\\build\\testbed --scene tmp"
-final = str(fina)
-final1 = final.removeprefix("('")
-final2 = final1.removesuffix("')")
-final3 = final2.replace("', '", "")
-os.system(final3)
+cwd = str(os.getcwd())
+path1 = cwd+'\\instant-ngp\\tmp'
+path0 = cwd+'\\instant-ngp'
+videopath = cwd+'\\instant-ngp\\tmp\\*.mp4'
+videos = glob.glob(videopath)
+videostr = ''.join(videos)
+os.chdir(path1)
+command = 'python '+path0+'\\scripts\\colmap2nerf.py --video_in '+videostr+' --video_fps 2 --run_colmap --aabb_scale 16'
+print(command)
+os.system(command)
+os.chdir(path0)
+run = cwd+'\\instant-ngp\\build\\testbed --scene tmp'
+os.system(run)
 x = input("Do you want to delete all files in instant-ngp\tmp folder [Y]es/[N]o: ")
 xu = x.upper()
 if xu == str('Y'):
