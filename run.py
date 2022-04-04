@@ -11,7 +11,7 @@ cwd = str(os.getcwd())
 path1 = cwd+'\\instant-ngp\\tmp'
 path0 = cwd+'\\instant-ngp'
 videopath = cwd+'\\instant-ngp\\tmp\\*.mp4'
-videos = glob.glob(videopath)
+videos = [f for f in listdir(videopath) if isfile(join(videopath, f))]
 videostr = ''.join(videos)
 os.chdir(path1)
 command = 'python '+path0+'\\scripts\\colmap2nerf.py --video_in '+videostr+' --video_fps 2 --run_colmap --aabb_scale 16'
