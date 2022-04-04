@@ -15,7 +15,6 @@ videos = [f for f in listdir(videopath) if isfile(join(videopath, f))]
 videostr = ''.join(videos)
 os.chdir(path1)
 command = 'python '+path0+'\\scripts\\colmap2nerf.py --video_in '+videostr+' --video_fps 2 --run_colmap --aabb_scale 16'
-print(command)
 os.system(command)
 os.chdir(path0)
 run = cwd+'\\instant-ngp\\build\\testbed --scene tmp'
