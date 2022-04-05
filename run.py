@@ -10,8 +10,7 @@ os.system("pip install opencv-python")
 cwd = str(os.getcwd())
 path1 = cwd+'\\instant-ngp\\tmp'
 path0 = cwd+'\\instant-ngp'
-videopath = cwd+'\\instant-ngp\\tmp'
-videos = [f for f in listdir(videopath) if isfile(join(videopath, f))]
+videos = [f for f in listdir(path1) if isfile(join(path1, f))]
 videostr = ''.join(videos)
 os.chdir(path1)
 command = 'python '+path0+'\\scripts\\colmap2nerf.py --video_in '+videostr+' --video_fps 2 --run_colmap --aabb_scale 16'
