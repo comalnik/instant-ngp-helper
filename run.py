@@ -13,15 +13,7 @@ path0 = cwd+'\\instant-ngp'
 videos = [f for f in listdir(path1) if isfile(join(path1, f))]
 videostr = ''.join(videos)
 os.chdir(path1)
-aabb = input("Enter custom aabb_scale (default-16): ")
-ap1 = 16
-if 16 > int(aabb) > 0:
-    ap1 = aabb
-fps = input("Enter custom video_fps (default-2): ")
-ap2 = 2
-if int(fps) > 2:
-    ap2 = fps
-command = 'python '+path0+'\\scripts\\colmap2nerf.py --video_in '+videostr+' --video_fps '+ap2+' --run_colmap --aabb_scale '+ap1
+command = 'python '+path0+'\\scripts\\colmap2nerf.py --video_in '+videostr+' --video_fps 2 --run_colmap --aabb_scale 16'
 os.system(command)
 os.chdir(path0)
 run = cwd+'\\instant-ngp\\build\\testbed --scene tmp'
