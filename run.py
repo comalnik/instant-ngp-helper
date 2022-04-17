@@ -13,10 +13,10 @@ path0 = cwd+'\\instant-ngp'
 videos = [f for f in listdir(path1) if isfile(join(path1, f))]
 videostr = ''.join(videos)
 os.chdir(path1)
-command = 'python '+path0+'\\scripts\\colmap2nerf.py --video_in '+videostr+' --video_fps 2 --run_colmap --aabb_scale 16'
+command = 'python "'+path0+'\\scripts\\colmap2nerf.py" --video_in "'+videostr+'" --video_fps 2 --run_colmap --aabb_scale 16'
 os.system(command)
 os.chdir(path0)
-run = cwd+'\\instant-ngp\\build\\testbed --scene tmp'
+run = '"'+cwd+'\\instant-ngp\\build\\testbed" --scene tmp'
 os.system(run)
 x = input("Do you want to delete all files in instant-ngp\tmp folder [Y]es/[N]o: ")
 xu = x.upper()
