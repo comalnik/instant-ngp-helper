@@ -2,7 +2,6 @@ import tkinter as tk
 import os
 from subprocess import call
 from tkinter import *
-
 root  = tk.Tk()
 
 canvas = tk.Canvas(root, width=1100, height=700)
