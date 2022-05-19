@@ -13,29 +13,11 @@ canvas.configure(background='#2d2d30')
 cwd = str(os.getcwd())
 path1 = cwd+'\\instant-ngp\\tmp'
 path0 = cwd+'\\instant-ngp'
-aabb=16
-
-os.system("pip install numpy")
-os.system("pip install opencv-python")
 
 def runvidcol():
-    aabb=int(aabbe.get())
-    if 0 < aabb < 17:
-        aabb=aabbe.get()
-    else:
-        aabb=16
-    print(aabb)
-
     call(["python", "runvidcol.py"])
 
 def runimgcol():
-    aabb=int(aabbe.get())
-    if 0 < aabb < 17:
-        aabb=aabbe.get()
-    else:
-        aabb=16 
-    print(aabb) 
-
     call(["python", "runimgcol.py"])
   
 def rungp():
@@ -64,15 +46,4 @@ del_btn = tk.Button(root, textvariable=del_text, height=5, width=40, command=lam
 del_text.set("Delete all files from the \instant-ngp\tmp dir")
 del_btn.grid(column=3, row=1)
 
-aabbl=Label( text="Enter custom aabb scale (default=16):", bg="#2d2d30", fg="white")
-aabbl.grid(row=0, column=0)
-aabbe=Entry(root, width=40)
-aabbe.grid(row=0, column=1)
-
 root.mainloop()
-
-
-
-
-
-
