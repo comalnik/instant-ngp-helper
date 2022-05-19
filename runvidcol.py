@@ -10,7 +10,5 @@ videos = [f for f in listdir(path1) if isfile(join(path1, f))]
 videostr = ''.join(videos)
 os.chdir(path1)
 command = 'python "'+path0+'\\scripts\\colmap2nerf.py" --video_in "'+videostr+'" --video_fps 2 --run_colmap --aabb_scale 16'
-print(command)
-os.system('pause')
 os.system(command)
 print("done")
