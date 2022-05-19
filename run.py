@@ -41,7 +41,7 @@ rungp_text.set("Run instant-ngp NeRF")
 rungp_btn.grid(column=2, row=1)
 
 del_text = tk.StringVar()
-del_btn = tk.Button(root, textvariable=del_text, height=5, width=45, command=lambda:delete())
+del_btn = tk.Button(root, textvariable=del_text, height=5, width=50, command=lambda:delete())
 del_text.set("Delete all files from the \instant-ngp\tmp dir")
 del_btn.grid(column=3, row=1)
 
