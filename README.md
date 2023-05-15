@@ -1,4 +1,6 @@
 # Instant-ngp helper
+This spaghetti code needs a rewrite. I dont care enough about this project anymore for that.
+
 This is a helper for using [instant-ngp](https://github.com/NVlabs/instant-ngp).
 ## How to use
 First install:
